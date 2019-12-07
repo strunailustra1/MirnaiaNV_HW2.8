@@ -13,6 +13,10 @@ struct Resource {
     let name: String
     let price: Float
     let image: String
+    
+    var searchText: String {
+        "\(article.lowercased()) \(brand.lowercased()) \(name.lowercased())"
+    }
 }
 
 extension Resource {
@@ -30,6 +34,5 @@ extension Resource {
             Resource(id: 10, article: "3397007640", brand: "BOSCH", name: "Щетки стеклоочиститей со спойлером комплект Aerotwin A640S 725/725 3397007640", price: 1270, image: "3397007640"),
             Resource(id: 11, article: "3397007297", brand: "BOSCH", name: "Щетки стеклоочистителя ATW 600/500 A297S 3397007297", price: 1112, image: "3397007297")
         ]
-        
     }
 }
