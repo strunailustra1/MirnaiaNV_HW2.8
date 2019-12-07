@@ -54,7 +54,6 @@
                             <constraint firstItem="DV4-mA-5nG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Hwv-1l-M9v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="axj-Fh-4f2" secondAttribute="trailing" constant="16" id="IQD-fa-NFh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DV4-mA-5nG" secondAttribute="trailing" constant="16" id="Rjb-FL-eOp"/>
-                            <constraint firstItem="DV4-mA-5nG" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="nHv-Tk-AuP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
