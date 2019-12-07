@@ -66,6 +66,13 @@ extension ResourceListController: UITextFieldDelegate {
         
         return true
     }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        resourceList = []
+        tableView.reloadData()
+        
+        return true
+    }
 }
 
 extension UIViewController {
