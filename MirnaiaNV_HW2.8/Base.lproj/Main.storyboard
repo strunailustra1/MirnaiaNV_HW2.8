@@ -299,6 +299,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Корзина" image="cart" catalog="system" selectedImage="cart" id="i1D-M5-3d7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="amountCartLabel" destination="bxy-3D-fRc" id="v6n-JK-oSk"/>
+                        <outlet property="quantityCartLabel" destination="aaO-3R-Aol" id="nJa-W6-dvx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPd-aC-pFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,10 +10,19 @@ import UIKit
 
 class CartViewController: UIViewController {
 
+    @IBOutlet var quantityCartLabel: UILabel!
+    @IBOutlet var amountCartLabel: UILabel!
+    
+    let cart = Cart.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        quantityCartLabel.text = String(cart.cartQuantity)
+        amountCartLabel.text = String(cart.cartAmount)
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
