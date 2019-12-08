@@ -200,6 +200,9 @@
                                 <state key="normal" title="Положить в корзину">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addToCart" destination="eVB-JV-vK2" eventType="touchUpInside" id="fRW-U3-LCt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -227,6 +230,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PQy-KA-CdD"/>
                     <connections>
+                        <outlet property="addToCartButton" destination="FoK-LE-YEi" id="gLD-g0-smM"/>
                         <outlet property="amountLabel" destination="cvu-RK-dyM" id="QpF-0K-F7g"/>
                         <outlet property="articleLabel" destination="2t1-A9-Orw" id="wzO-7C-dKK"/>
                         <outlet property="brandLabel" destination="emW-5w-0ls" id="dpX-x1-IcC"/>
