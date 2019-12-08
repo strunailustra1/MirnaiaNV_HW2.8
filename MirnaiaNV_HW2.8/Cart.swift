@@ -46,4 +46,13 @@ class Cart {
     func getCartItems() -> [Int:CartItem] {
         items
     }
+    
+    func getCartItemsArray() -> [CartItem] {
+        var result: [CartItem] = []
+        for (_, item) in items {
+            result.append(item)
+        }
+        return result
+    }
+    
 }

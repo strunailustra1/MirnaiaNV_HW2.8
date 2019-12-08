@@ -12,17 +12,22 @@ class CartViewController: UIViewController {
 
     @IBOutlet var quantityCartLabel: UILabel!
     @IBOutlet var amountCartLabel: UILabel!
+    @IBOutlet var tableView: UITableView!
     
     let cart = Cart.instance
+    
+    var cartItems: [CartItem]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         quantityCartLabel.text = String(cart.cartQuantity)
         amountCartLabel.text = String(cart.cartAmount)
+        cartItems = cart.getCartItemsArray()
+        tableView.reloadData()
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,16 +40,16 @@ class CartViewController: UIViewController {
 
 extension CartViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        return cartItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "resourceItem", for: indexPath) as! ResourceCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cartItem", for: indexPath) as! ResourceCell
 
-//        cell.articleLabel.text = resourceList[indexPath.row].article
-//        cell.brandLabel.text = resourceList[indexPath.row].brand
-//        cell.namelabel.text = resourceList[indexPath.row].name
-//        cell.priceLabel.text = String(resourceList[indexPath.row].price)
+        cell.articleLabel.text = cartItems[indexPath.row].resource.article
+        cell.brandLabel.text = cartItems[indexPath.row].resource.brand
+        cell.namelabel.text = cartItems[indexPath.row].resource.name
+        cell.priceLabel.text = String(cartItems[indexPath.row].resource.price)
 
         return cell
     }
