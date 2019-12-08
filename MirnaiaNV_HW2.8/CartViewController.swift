@@ -18,10 +18,6 @@ class CartViewController: UIViewController {
     
     var cartItems: [CartItem]!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         quantityCartLabel.text = String(cart.cartQuantity)
@@ -30,12 +26,13 @@ class CartViewController: UIViewController {
         tableView.reloadData()
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "detail" {
-//            let detailVC = segue.destination as! ResourceDetailViewController
-//            detailVC.resource = sender as? Resource
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "resourceItem" else { return }
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let detailVC = segue.destination as! ResourceDetailViewController
+            detailVC.resource = cartItems[indexPath.row].resource
+        }
+    }
 }
 
 extension CartViewController: UITableViewDataSource {

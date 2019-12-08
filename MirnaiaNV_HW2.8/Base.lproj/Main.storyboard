@@ -382,6 +382,7 @@
                                             <outlet property="priceLabel" destination="wRn-Od-bEY" id="Vax-FO-ZmP"/>
                                             <outlet property="quantityLabel" destination="VrO-5H-6m0" id="r1K-Qs-fvM"/>
                                             <outlet property="resourceImage" destination="81E-ju-5yb" id="qXA-bT-EQv"/>
+                                            <segue destination="JzU-dc-AqP" kind="unwind" identifier="resourceItem" unwindAction="unwindFor:" id="y7m-sg-4Yc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -413,6 +414,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPd-aC-pFK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="JzU-dc-AqP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-660" y="760"/>
         </scene>
