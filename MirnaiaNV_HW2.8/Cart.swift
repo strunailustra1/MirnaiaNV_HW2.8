@@ -18,6 +18,22 @@ class Cart {
     static let instance = Cart()
     
     private var items: [Int:CartItem] = [:]
+     
+    var cartQuantity: Int {
+        var quantity = 0
+        for (_, item) in items {
+            quantity += item.quantity
+        }
+        return quantity
+    }
+    
+    var cartAmount: Double {
+        var amount = 0.0
+        for (_, item) in items {
+            amount += Double(item.quantity) * item.resource.price
+        }
+        return amount
+    }
     
     func addToCart(cartItem: CartItem) {
         if cartItem.quantity > 0 {

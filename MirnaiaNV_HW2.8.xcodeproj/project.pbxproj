@@ -17,6 +17,7 @@
 		1E170E20239C2DCD000865A0 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E170E1F239C2DCD000865A0 /* Resource.swift */; };
 		1E284A12239D2FC50065D26B /* ResourceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E284A11239D2FC50065D26B /* ResourceDetailViewController.swift */; };
 		1E284A14239D3A700065D26B /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E284A13239D3A700065D26B /* Cart.swift */; };
+		1E284A16239D56FA0065D26B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E284A15239D56FA0065D26B /* CartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1E170E1F239C2DCD000865A0 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		1E284A11239D2FC50065D26B /* ResourceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceDetailViewController.swift; sourceTree = "<group>"; };
 		1E284A13239D3A700065D26B /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		1E284A15239D56FA0065D26B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1E170E0F239C1FBF000865A0 /* ResourceListViewController.swift */,
 				1E284A11239D2FC50065D26B /* ResourceDetailViewController.swift */,
 				1E284A13239D3A700065D26B /* Cart.swift */,
+				1E284A15239D56FA0065D26B /* CartViewController.swift */,
 				1E0F8867239D10BF00D8A288 /* ResourceCell.swift */,
 				1E170E1F239C2DCD000865A0 /* Resource.swift */,
 				1E170E11239C1FBF000865A0 /* Main.storyboard */,
@@ -154,6 +157,7 @@
 				1E0F8868239D10BF00D8A288 /* ResourceCell.swift in Sources */,
 				1E170E10239C1FBF000865A0 /* ResourceListViewController.swift in Sources */,
 				1E284A14239D3A700065D26B /* Cart.swift in Sources */,
+				1E284A16239D56FA0065D26B /* CartViewController.swift in Sources */,
 				1E170E20239C2DCD000865A0 /* Resource.swift in Sources */,
 				1E170E0C239C1FBF000865A0 /* AppDelegate.swift in Sources */,
 				1E170E0E239C1FBF000865A0 /* SceneDelegate.swift in Sources */,
