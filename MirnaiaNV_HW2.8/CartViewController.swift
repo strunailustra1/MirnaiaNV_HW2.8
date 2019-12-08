@@ -34,7 +34,7 @@ class CartViewController: UIViewController {
     
     func updateCartElements() {
         quantityCartLabel.text = String(cart.cartQuantity)
-        amountCartLabel.text = String(cart.cartAmount)
+        amountCartLabel.text = String(cart.cartAmount) + "₽"
         cartItems = cart.getCartItemsArray()
         tableView.reloadData()
     }
@@ -51,9 +51,9 @@ extension CartViewController: UITableViewDataSource {
         cell.articleLabel.text = cartItems[indexPath.row].resource.article
         cell.brandLabel.text = cartItems[indexPath.row].resource.brand
         cell.namelabel.text = cartItems[indexPath.row].resource.name
-        cell.priceLabel.text = String(cartItems[indexPath.row].resource.price)
+        cell.priceLabel.text = String(cartItems[indexPath.row].resource.price) + "₽"
         cell.quantityLabel.text = String(cartItems[indexPath.row].quantity)
-        cell.amountLabel.text = String(cartItems[indexPath.row].amount)
+        cell.amountLabel.text = String(cartItems[indexPath.row].amount) + "₽"
         cell.resourceImage.image = UIImage(named: cartItems[indexPath.row].resource.imageSquare)
 
         return cell

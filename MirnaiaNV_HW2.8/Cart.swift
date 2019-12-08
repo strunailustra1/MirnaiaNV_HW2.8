@@ -13,7 +13,7 @@ struct CartItem {
     let resource: Resource
     
     var amount: Double {
-        Double(quantity) * resource.price
+        (100 * Double(quantity) * resource.price).rounded() / 100
     }
 }
 
@@ -36,7 +36,7 @@ class Cart {
         for (_, item) in items {
             amount += item.amount
         }
-        return amount
+        return (100 * amount).rounded() / 100
     }
     
     func addToCart(cartItem: CartItem) {

@@ -33,7 +33,7 @@ class ResourceDetailViewController: UIViewController {
         brandLabel.text = resource.brand
         articleLabel.text = resource.article
         nameLabel.text = resource.name
-        priceLabel.text = String(resource.price)
+        priceLabel.text = String(resource.price) + "₽"
         imageResource.image = UIImage(named: resource.imageLandscape)
         
         if let cartItem = Cart.instance.getCartItems()[resource.id] {
@@ -79,6 +79,6 @@ class ResourceDetailViewController: UIViewController {
     private func changeAmount() {
         let quantity = quantityStepper.value
         quantityLabel.text = String(Int(quantity))
-        amountLabel.text = String(quantity * resource.price)
+        amountLabel.text = String((100 * quantity * resource.price).rounded() / 100) + "₽"
     }
 }

@@ -42,7 +42,7 @@ extension ResourceListViewController: UITableViewDataSource {
         cell.articleLabel.text = resourceList[indexPath.row].article
         cell.brandLabel.text = resourceList[indexPath.row].brand
         cell.namelabel.text = resourceList[indexPath.row].name
-        cell.priceLabel.text = String(resourceList[indexPath.row].price)
+        cell.priceLabel.text = String(resourceList[indexPath.row].price) + "₽"
         cell.resourceImage.image = UIImage(named: resourceList[indexPath.row].imageSquare)
         
         return cell
@@ -54,6 +54,10 @@ extension ResourceListViewController: UITableViewDelegate {
         let resource = resourceList[indexPath.row]
         performSegue(withIdentifier: "detail", sender: resource)
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        120
+//    }
 }
 
 extension ResourceListViewController: UITextFieldDelegate {
