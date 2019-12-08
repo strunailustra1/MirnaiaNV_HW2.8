@@ -11,6 +11,10 @@ import Foundation
 struct CartItem {
     let quantity: Int
     let resource: Resource
+    
+    var amount: Double {
+        Double(quantity) * resource.price
+    }
 }
 
 class Cart {
@@ -30,7 +34,7 @@ class Cart {
     var cartAmount: Double {
         var amount = 0.0
         for (_, item) in items {
-            amount += Double(item.quantity) * item.resource.price
+            amount += item.amount
         }
         return amount
     }

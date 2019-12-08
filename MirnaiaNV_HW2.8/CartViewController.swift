@@ -50,6 +50,8 @@ extension CartViewController: UITableViewDataSource {
         cell.brandLabel.text = cartItems[indexPath.row].resource.brand
         cell.namelabel.text = cartItems[indexPath.row].resource.name
         cell.priceLabel.text = String(cartItems[indexPath.row].resource.price)
+        cell.quantityLabel.text = String(cartItems[indexPath.row].quantity)
+        cell.amountLabel.text = String(cartItems[indexPath.row].amount)
 
         return cell
     }
