@@ -26,9 +26,9 @@ class ResourceDetailViewController: UIViewController {
     @IBOutlet var amountLabel: UILabel!
     @IBOutlet var quantityStepper: UIStepper!
     @IBOutlet var addToCartButton: UIButton!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         brandLabel.text = resource.brand
         articleLabel.text = resource.article
@@ -41,6 +41,10 @@ class ResourceDetailViewController: UIViewController {
         }
         
         changeAmount()
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        
     }
     
     @IBAction func quantityChange() {
