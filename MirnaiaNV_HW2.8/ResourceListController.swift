@@ -17,7 +17,7 @@ class ResourceListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 150
+        tableView.estimatedRowHeight = 92
         tableView.rowHeight = UITableView.automaticDimension
         
         hideKeyboardWhenTappedAround()
@@ -42,7 +42,7 @@ extension ResourceListController: UITableViewDataSource {
 }
 
 extension ResourceListController: UITableViewDelegate {
-    
+
 }
 
 extension ResourceListController: UITextFieldDelegate {
