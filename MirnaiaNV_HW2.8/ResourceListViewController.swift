@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResourceListController: UIViewController {
+class ResourceListViewController: UIViewController {
 
     var resourceList: [Resource] = []
     
@@ -22,9 +22,16 @@ class ResourceListController: UIViewController {
         
         hideKeyboardWhenTappedAround()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail" {
+            let detailVC = segue.destination as! ResourceDetailViewController
+            detailVC.resource = sender as? Resource
+        }
+    }
 }
 
-extension ResourceListController: UITableViewDataSource {
+extension ResourceListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         resourceList.count
     }
@@ -41,11 +48,14 @@ extension ResourceListController: UITableViewDataSource {
     }
 }
 
-extension ResourceListController: UITableViewDelegate {
-
+extension ResourceListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let resource = resourceList[indexPath.row]
+        performSegue(withIdentifier: "detail", sender: resource)
+    }
 }
 
-extension ResourceListController: UITextFieldDelegate {
+extension ResourceListViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         var searchString = textField.text!
         if string.count > 0 {

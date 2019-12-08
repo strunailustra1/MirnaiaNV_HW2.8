@@ -11,7 +11,7 @@ struct Resource {
     let article: String
     let brand: String
     let name: String
-    let price: Float
+    let price: Double
     let image: String
     
     var searchText: String {
@@ -22,8 +22,8 @@ struct Resource {
 extension Resource {
     static func getResourceList() -> [Resource] {
         return [
-            Resource(id: 1, article: "GDB1044", brand: "TRW", name: "Колодки передние AUDI 80 (B4), CHERY AMULET, VW GOLF III, PASSAT (3A) GDB1044", price: 1545.00, image: "GDB1044"),
-            Resource(id: 2, article: "GDB826", brand: "TRW", name: "Колодки передние AUDI 80 B3, B4, VW PASSAT (3A_) GDB826 ", price: 1332.00, image: "GDB826"),
+            Resource(id: 1, article: "GDB1044", brand: "TRW", name: "Колодки передние AUDI 80 (B4), CHERY AMULET, VW GOLF III, PASSAT (3A) GDB1044", price: 1545, image: "GDB1044"),
+            Resource(id: 2, article: "GDB826", brand: "TRW", name: "Колодки передние AUDI 80 B3, B4, VW PASSAT (3A_) GDB826 ", price: 1332, image: "GDB826"),
             Resource(id: 3, article: "KL2", brand: "KNECHT", name: "Фильтр топливный KL2", price: 386, image: "KL2"),
             Resource(id: 4, article: "KL186", brand: "KNECHT", name: "Фильтр топливный KL186", price: 271, image: "KL186"),
             Resource(id: 5, article: "1845004", brand: "IDEMITSU", name: "Моторное масло IDEMITSU ZEPRO TOURING 5W30 SN/GF-5 4л 1845-004", price: 1855, image: "1845004"),
