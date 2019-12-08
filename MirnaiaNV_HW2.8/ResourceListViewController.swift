@@ -17,6 +17,7 @@ class ResourceListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // почему-то не работает, пришлось уменьшить шрифт
         tableView.estimatedRowHeight = 92
         tableView.rowHeight = UITableView.automaticDimension
         
@@ -54,10 +55,6 @@ extension ResourceListViewController: UITableViewDelegate {
         let resource = resourceList[indexPath.row]
         performSegue(withIdentifier: "detail", sender: resource)
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        120
-//    }
 }
 
 extension ResourceListViewController: UITextFieldDelegate {
