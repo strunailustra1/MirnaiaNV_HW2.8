@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0F8868239D10BF00D8A288 /* ResourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0F8867239D10BF00D8A288 /* ResourceCell.swift */; };
 		1E170E0C239C1FBF000865A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E170E0B239C1FBF000865A0 /* AppDelegate.swift */; };
 		1E170E0E239C1FBF000865A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E170E0D239C1FBF000865A0 /* SceneDelegate.swift */; };
 		1E170E10239C1FBF000865A0 /* ResourceListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E170E0F239C1FBF000865A0 /* ResourceListController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E0F8867239D10BF00D8A288 /* ResourceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceCell.swift; sourceTree = "<group>"; };
 		1E170E08239C1FBF000865A0 /* MirnaiaNV_HW2.8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MirnaiaNV_HW2.8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E170E0B239C1FBF000865A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E170E0D239C1FBF000865A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				1E170E0B239C1FBF000865A0 /* AppDelegate.swift */,
 				1E170E0D239C1FBF000865A0 /* SceneDelegate.swift */,
 				1E170E0F239C1FBF000865A0 /* ResourceListController.swift */,
+				1E0F8867239D10BF00D8A288 /* ResourceCell.swift */,
 				1E170E1F239C2DCD000865A0 /* Resource.swift */,
 				1E170E11239C1FBF000865A0 /* Main.storyboard */,
 				1E170E14239C1FC1000865A0 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E0F8868239D10BF00D8A288 /* ResourceCell.swift in Sources */,
 				1E170E10239C1FBF000865A0 /* ResourceListController.swift in Sources */,
 				1E170E20239C2DCD000865A0 /* Resource.swift in Sources */,
 				1E170E0C239C1FBF000865A0 /* AppDelegate.swift in Sources */,
