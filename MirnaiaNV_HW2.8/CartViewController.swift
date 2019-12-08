@@ -54,6 +54,7 @@ extension CartViewController: UITableViewDataSource {
         cell.priceLabel.text = String(cartItems[indexPath.row].resource.price)
         cell.quantityLabel.text = String(cartItems[indexPath.row].quantity)
         cell.amountLabel.text = String(cartItems[indexPath.row].amount)
+        cell.resourceImage.image = UIImage(named: cartItems[indexPath.row].resource.imageSquare)
 
         return cell
     }

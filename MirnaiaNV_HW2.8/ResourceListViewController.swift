@@ -43,6 +43,7 @@ extension ResourceListViewController: UITableViewDataSource {
         cell.brandLabel.text = resourceList[indexPath.row].brand
         cell.namelabel.text = resourceList[indexPath.row].name
         cell.priceLabel.text = String(resourceList[indexPath.row].price)
+        cell.resourceImage.image = UIImage(named: resourceList[indexPath.row].imageSquare)
         
         return cell
     }

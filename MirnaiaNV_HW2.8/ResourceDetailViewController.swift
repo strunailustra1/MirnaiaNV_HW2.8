@@ -34,6 +34,7 @@ class ResourceDetailViewController: UIViewController {
         articleLabel.text = resource.article
         nameLabel.text = resource.name
         priceLabel.text = String(resource.price)
+        imageResource.image = UIImage(named: resource.imageLandscape)
         
         if let cartItem = Cart.instance.getCartItems()[resource.id] {
             quantityStepper.value = Double(cartItem.quantity)
