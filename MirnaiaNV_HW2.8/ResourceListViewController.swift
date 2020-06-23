@@ -18,8 +18,8 @@ class ResourceListViewController: UIViewController {
         super.viewDidLoad()
         
         // почему-то не работает, пришлось уменьшить шрифт
-        tableView.estimatedRowHeight = 92
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 96
         
         hideKeyboardWhenTappedAround()
     }

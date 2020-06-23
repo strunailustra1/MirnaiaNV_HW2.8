@@ -26,8 +26,15 @@ class CartViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "resourceItem" else { return }
-        if let indexPath = tableView.indexPathForSelectedRow {
-            let detailVC = segue.destination as! ResourceDetailViewController
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        
+        //let destinationNavigationController = segue.destination as! UINavigationController
+        //print(destinationNavigationController)
+        //let targetController = destinationNavigationController.topViewController
+        
+        print(segue.destination)
+        
+        if let navigationVC = segue.destination as? UINavigationController, let detailVC = navigationVC.topViewController as? ResourceDetailViewController {
             detailVC.resource = cartItems[indexPath.row].resource
         }
     }
